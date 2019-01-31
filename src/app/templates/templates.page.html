@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Forms
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button icon-only (click)="logOut()">
+        <ion-icon name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card (click)="onEditTemplate();">
+    <ion-card-header>
+      Test Template
+    </ion-card-header>
+    <ion-card-content>
+      This is the test template. Please click this template to test!!!
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button class="grid-btn" (click)="onShowGrid();">Open Incidents</ion-button>
+</ion-content>
