@@ -1,9 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>reset-pwd</ion-title>
+  	<ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Reset Password</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-
+  <p class="reset-title">We will send the new password to your email address.</p>
+  <ion-item>
+    <ion-label color="primary" position="stacked">Email:</ion-label>
+    <ion-input type="email" placeholder="Enter the email address" [(ngModel)]="resetInfo.email"></ion-input>
+  </ion-item>
+  
+  <ion-button icon-start class="reset-btn">
+    <ion-icon padding-right name="send" class="btn-icon"></ion-icon>
+    Send Email
+  </ion-button>
 </ion-content>

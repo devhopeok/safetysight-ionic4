@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController, ToastController, Events, MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-reset-pwd',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResetPwdPage implements OnInit {
 
-  constructor() { }
+  resetInfo = {
+    email: '',
+    password: '',
+  };
+
+  constructor(
+  	public navCtrl: NavController, 
+    public toastCtrl: ToastController, 
+    public events: Events,
+    public menuCtrl: MenuController
+  ) { }
 
   ngOnInit() {
   }
-
 }
+// updated

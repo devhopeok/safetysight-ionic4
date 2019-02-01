@@ -1,9 +1,30 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>signup1</ion-title>
+  	<ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Sign Up - Step 1 of 5</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+  <p class="enter-title">Enter your details below:</p>
+  <ion-item>
+    <ion-label color="primary"  position="stacked">First Name:</ion-label>
+    <ion-input placeholder="Enter the first name" [(ngModel)]="signupInfo.firstName"></ion-input>
+  </ion-item>
 
+  <ion-item>
+    <ion-label color="primary"  position="stacked">Surname:</ion-label>
+    <ion-input placeholder="Enter the surname" [(ngModel)]="signupInfo.surname"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary"  position="stacked">Email:</ion-label>
+    <ion-input type="email" placeholder="Enter the email address" [(ngModel)]="signupInfo.email"></ion-input>
+  </ion-item>
+  
+  <ion-button class="login-btn" (click)="onNext();">
+    Next
+  </ion-button>
 </ion-content>

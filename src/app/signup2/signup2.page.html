@@ -1,9 +1,27 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>signup2</ion-title>
+  	<ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Sign Up - Step 2 of 5</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+  <p class="enter-title">Enter your company details below:</p>
+  <ion-item>
+    <ion-label color="primary" position="stacked">Company Name:</ion-label>
+    <ion-input placeholder="Enter the company name" [(ngModel)]="signupInfo.companyName"></ion-input>
+  </ion-item>
 
+  <ion-item>
+    <ion-label color="primary" position="stacked">Short Name:</ion-label>
+    <ion-input placeholder="Enter the short name" [(ngModel)]="signupInfo.shortName"></ion-input>
+  </ion-item>
+  
+  <p class="tip">This will be used for your login page like http://yourname.safetysight.com</p>
+  
+  <ion-button class="login-btn" (click)="onNext();">
+    Next
+  </ion-button>
 </ion-content>
